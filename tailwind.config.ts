@@ -9,9 +9,14 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        background: "var(--background)",
-        foreground: "var(--foreground)",
+        dark: "#111111",
+        primary: "#0045FF",
+        secondary: "#757575",
       },
+      fontFamily:{
+        inter: ['var(--font-inter)'],
+        mont: ['var(--font-montserrat)'],
+      }
     },
   },
   plugins: [],
