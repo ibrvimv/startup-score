@@ -25,7 +25,7 @@ export default function Home() {
         <div className='w-full mt-48'>
           <h2 className='font-bold text-5xl text-center'>Forecast Your Future with <br />
             StartupScore</h2>
-          <p className='text-center font-semibold text-2xl mt-10'>The StartupScore predicts a startup's success rate <br />
+          <p className='text-center font-semibold text-2xl mt-10'>The StartupScore predicts a startup&apos;s success rate <br />
             by using AI to assess its alignment with the target audience and location factors.<br />
             It provides insights into market demand, competition, demographic fit, and potential challenges.</p>
         </div>
