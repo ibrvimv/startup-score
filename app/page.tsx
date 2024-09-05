@@ -36,20 +36,20 @@ export default function Home() {
           <h2 className='font-bold md:text-5xl text-3xl text-center mb-8'>How it works?</h2>
           <div className='grid md:grid-cols-3 w-full grid-rows-3'>
             <div className='flex gap-3 max-md:grid max-md:grid-cols-2 max-md:items-center'>
-              <div className='text-8xl font-inter'>
+              <div className='text-8xl md:text-9xl font-inter'>
                 01
               </div>
               <div className='flex-flex-col'>Write your<br /><span className='font-bold'>business idea</span></div>
             </div>
             <div className='flex gap-3 max-md:grid max-md:grid-cols-2 max-md:items-center'>
-              <div className='text-8xl font-inter'>
+              <div className='text-8xl md:text-9xl font-inter'>
                 02
               </div>
               <div className='flex-flex-col'>Describe your<br /><span className='font-bold'>target audience, <br />
                 location</span></div>
             </div>
             <div className='flex gap-3 max-md:grid max-md:grid-cols-2 max-md:items-center'>
-              <div className='text-8xl font-inter'>
+              <div className='text-8xl  md:text-9xl font-inter'>
                 03
               </div>
               <div className='flex-flex-col'>Let <span className='font-bold'>AI</span> get<br />
