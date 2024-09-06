@@ -25,11 +25,11 @@ const Chat = () => {
 
 	const renderResponse = () => {
 		return (
-			<div className="response">
+			<div className="response h-fit flex flex-col gap-5 mb-20">
 				{messages.map((m, index) => (
 					<div
 						key={m.id}
-						className={`chat-line ${m.role === "user" ? "user-chat" : "ai-chat"
+						className={`flex items-start chat-line ${m.role === "user" ? "user-chat" : "ai-chat"
 							}`}
 					>
 						<Image
@@ -37,7 +37,7 @@ const Chat = () => {
 							alt="avatar"
 							width={40}
 							height={40}
-							src={m.role === "user" ? "/user-avatar.jpg" : "/ai-avatar.png"}
+							src={m.role === "user" ? "/user-avatar.png" : "/ai-avatar.png"}
 						/>
 						<div style={{ width: "100%", marginLeft: "16px" }}>
 							<p className="message">{m.content}</p>
