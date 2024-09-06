@@ -1,16 +1,39 @@
+'use client'
 import Image from 'next/image'
 import Chat from '@/components/chat';
+import { useEffect, useRef } from 'react';
+import { useGSAP } from '@gsap/react';
+import gsap from 'gsap';
 
 export default function Home() {
 
+  const container = useRef(null)
+
+  useEffect(() => {
+    (async () => {
+      const LocomotiveScroll = (await import('locomotive-scroll')).default;
+      // eslint-disable-next-line @typescript-eslint/no-unused-vars
+      const locomotiveScroll = new LocomotiveScroll();
+    })();
+  }, []);
+
+  useGSAP(
+    () => {
+      // gsap code here...
+      gsap.fromTo('.logo-animate', { y: -100, opacity: 0 }, { y: 0, opacity: 1, duration: 2, ease: 'back.inOut' }); // <-- automatically reverted
+      gsap.fromTo('.header-animate', { opacity: 0 }, { opacity: 1, duration: 3, ease: 'back.inOut' })
+    },
+    { scope: container }
+  );
+
   return (
-    <div className="">
+    <div className="" ref={container}>
       <main className="flex flex-col gap-8  items-center sm:items-start md:px-16 px-8 w-full">
-        <div className=" md:text-4xl text-2xl font-bold h-44 flex items-center w-full">
+        <div className=" md:text-4xl text-2xl font-bold h-44 flex items-center w-full logo-animate">
           StartupScore
         </div>
-        <div className="grid max-md:grid-rows-3 gap-5 md:gap-0 w-full md:grid-cols-6">
-          <h1 className="font-inter md:text-8xl text-5xl w-full flex flex-col row-span-1 md:col-span-4 gap-2">
+        <div className="grid max-md:grid-rows-3 gap-5 md:gap-0 w-full md:grid-cols-6 header-animate">
+          <h1 className="font-inter md:text-8xl text-5xl w-full flex flex-col row-span-1 md:col-span-4 gap-2 ">
             From Vision <br />
             to Validation with
             <span className=" bg-primary text-white md:h-36 h-20 flex items-center font-bold md:w-fit w-full">
