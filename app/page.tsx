@@ -1,6 +1,8 @@
 import Image from 'next/image'
+import Chat from '@/components/chat';
 
 export default function Home() {
+
   return (
     <div className="">
       <main className="flex flex-col gap-8  items-center sm:items-start md:px-16 px-8 w-full">
@@ -34,7 +36,7 @@ export default function Home() {
 
         <div className='w-full md:my-48 my-24 '>
           <h2 className='font-bold md:text-5xl text-3xl text-center mb-8'>How it works?</h2>
-          <div className='grid md:grid-cols-3 w-full grid-rows-3'>
+          <div className='grid md:grid-cols-3 w-full max-md:grid-rows-3'>
             <div className='flex gap-3 max-md:grid max-md:grid-cols-2 max-md:items-center'>
               <div className='text-8xl md:text-9xl font-inter'>
                 01
@@ -57,7 +59,15 @@ export default function Home() {
             </div>
           </div>
         </div>
+        {/* Chat */}
+        <div className="flex-grow overflow-hidden w-full">
+          <Chat />
+        </div>
       </main>
+
+
+
+
       <footer className="row-start-3 flex gap-6 flex-wrap items-center justify-center">
 
       </footer>
