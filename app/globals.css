@@ -3,12 +3,8 @@
 @tailwind utilities;
 
 :root {
-  @apply bg-dark text-white
-
+  @apply bg-dark text-white;
 }
-
-
-
 
 @layer utilities {
   .text-balance {

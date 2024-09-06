@@ -83,7 +83,7 @@ export default function Home() {
           </div>
         </div>
         {/* Chat */}
-        <div className="flex-grow overflow-hidden w-full">
+        <div className="flex-grow overflow-hidden text-white w-full">
           <Chat />
         </div>
       </main>
