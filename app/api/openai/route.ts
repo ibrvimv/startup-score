@@ -3,9 +3,7 @@ import { OpenAIStream, StreamingTextResponse } from 'ai';
 
 // Create an OpenAI API client
 const openai = new OpenAI({
-  apiKey:
-    process.env.OPENAI_API_KEY ||
-    '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',
+  apiKey: process.env.OPENAI_API_KEY || '',
 });
 
 // IMPORTANT! Set the runtime to edge
