@@ -42,7 +42,7 @@ const Chat = () => {
 						<div className="message-container" style={{ width: "100%", marginLeft: "16px" }}>
 							<div
 								className={`message-bubble ${m.role === "user" ? "" : ""
-									} p-4 rounded-lg`}
+									}  rounded-lg`}
 							>
 								<p
 									className={`message-content ${m.role === "user" ? "text-left" : "text-justify"
