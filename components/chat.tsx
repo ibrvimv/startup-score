@@ -25,7 +25,7 @@ const Chat = () => {
 
 	const renderResponse = () => {
 		return (
-			<div className="response h-fit flex flex-col gap-5 mb-20">
+			<div className="response h-fit flex flex-col gap-8 mb-20">
 				{messages.map((m, index) => (
 					<div
 						key={m.id}
@@ -39,17 +39,31 @@ const Chat = () => {
 							height={40}
 							src={m.role === "user" ? "/user-avatar.png" : "/ai-avatar.png"}
 						/>
-						<div style={{ width: "100%", marginLeft: "16px" }}>
-							<p className="message">{m.content}</p>
-							{index < messages.length - 1 && (
-								<div className="horizontal-line" />
-							)}
+						<div className="message-container" style={{ width: "100%", marginLeft: "16px" }}>
+							<div
+								className={`message-bubble ${m.role === "user" ? "" : ""
+									} p-4 rounded-lg`}
+							>
+								<p
+									className={`message-content ${m.role === "user" ? "text-left" : "text-justify"
+										} text-sm leading-relaxed`}
+								>
+									{m.content.split("\n").map((line, idx) => (
+										<span key={idx} className={`${line.startsWith("###") ? "font-bold" : ""}`}>
+											{line}
+											<br />
+										</span>
+									))}
+								</p>
+							</div>
+							{index < messages.length - 1 && <div className="horizontal-line mt-2 mb-2 border-gray-300" />}
 						</div>
 					</div>
 				))}
 			</div>
 		);
 	};
+
 
 	return (
 		<div ref={chatContainer} className="mb-44 w-full">

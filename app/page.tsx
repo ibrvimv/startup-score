@@ -91,8 +91,8 @@ export default function Home() {
 
 
 
-      <footer className="row-start-3 flex gap-6 flex-wrap items-center justify-center">
-
+      <footer className="row-start-3 flex gap-6 flex-wrap items-center justify-center text-white mb-20">
+        © Team Gazaakh 2024
       </footer>
     </div>
   );
